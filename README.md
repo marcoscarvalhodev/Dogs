@@ -20,7 +20,7 @@ First of all you should go to the project folder through the VSCode Terminal whi
 
 * **cd dogs**
 
-To run it on VSCode you should install **serve** globally on your VSCode Terminal:
+To run it on VSCode you should install **serve** globally in your VSCode Terminal:
 * **npm install -g serve**
 (if you already have **serve** installed you can skip this step)
   
