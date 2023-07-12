@@ -27,4 +27,4 @@ To run it on VSCode you should install **serve** globally on your VSCode Termina
 and lastly:
 * **serve -s build**
 
-and so you just press CTRL + Click on the **local** section created.
+and so you just press CTRL + Click on the **local** section created and a static build from the application will be rendered in your web browser.
