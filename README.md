@@ -1,6 +1,6 @@
 # Dogs React Application
 
-Dogs is a React.JS project that has as its main target being a copy of a social media behaviour, such as Instagram, where you can identify how many people viewed your posts, comment in the in posts and upvote them.
+Dogs is a React.JS project that has as its main target being a copy of a social media behaviour, such as Instagram, where you can create an account, sign in to your account, identify how many people viewed your posts, comment in the posts and upvote them.
 
 # Technologies
 
