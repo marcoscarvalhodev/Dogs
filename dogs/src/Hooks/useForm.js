@@ -9,11 +9,11 @@ const types = {
 
 const useForm = (type) => {
   const [value, setValue] = React.useState("");
-  const [error, setError] = React.useState(null)
+  const [error, setError] = React.useState(null);
   
   function onChange({target}) {
     if(error) validate(target.value)
-    setValue(target.value);
+    setValue(target.value)
     
   }
 
