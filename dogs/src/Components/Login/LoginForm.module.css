@@ -34,9 +34,10 @@
 
 .subtitle::after {
   content: '';
-  display: 'block';
+  display: block;
   background: #ddd;
   height: .5rem;
   width: 3rem;
   border-radius: .2rem;
+  margin-top: 0.4rem;
 }
