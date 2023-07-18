@@ -66,7 +66,7 @@ const LoginForm = () => {
       <Link className={styles.perdeu} to='/login/perdeu'>Forgot Password?</Link>
       <div className={styles.cadastro}>
         <h2 className={styles.subtitle}>Sign Up</h2>
-        <p>Don't you have an account yet? Sign Up</p>
+        <p>Don't you have an account yet? Create one.</p>
         <Link className={stylesBtn.button} to="/login/criar">Sign Up</Link>
       </div>
       
