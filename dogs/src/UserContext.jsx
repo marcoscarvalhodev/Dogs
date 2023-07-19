@@ -63,6 +63,7 @@ export const UserStorage = ({ children }) => {
           if (!response.ok) throw new Error("Token inválido"); //if it is invalid, it will go directly to catch and skip getUser.
           await getUser(token);
         } catch (err) {
+          console.log(err)
           userLogout();
         } finally {
           setLoading(false);
