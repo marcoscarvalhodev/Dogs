@@ -63,11 +63,11 @@ const LoginForm = () => {
         {loading ? <Button disabled>Loading...</Button> : <Button>Enter</Button> }
         <Error error={error}/>
       </form>
-      <Link className={styles.perdeu} to='/login/perdeu'>Forgot Password?</Link>
+      <Link className={styles.perdeu} to='/login/lost'>Forgot Password?</Link>
       <div className={styles.cadastro}>
         <h2 className={styles.subtitle}>Sign Up</h2>
         <p>Don't you have an account yet? Create one.</p>
-        <Link className={stylesBtn.button} to="/login/criar">Sign Up</Link>
+        <Link className={stylesBtn.button} to="/login/create">Sign Up</Link>
       </div>
       
     </section>
