@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import styles from "./UserHeaderNav.module.css";
 import { NavLink, useLocation } from "react-router-dom";
 import { UserContext } from "../../UserContext";
