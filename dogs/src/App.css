@@ -66,16 +66,21 @@ input {
 }
 
 .title::after {
-  content: "";
+  content: '';
   display: block;
   width: 1.5rem;
   height: 1.5rem;
-  background: #49ce0b;
+  background: url('../src/Assets/paw.svg') no-repeat center center;
   position: absolute;
   bottom: 5px;
   left: -5px;
-  border-radius: 0.2rem;
+  border-radius: .2rem;
   z-index: -1;
+  rotate: -30deg;
+}
+
+.title::after svg > *{
+  fill: #49ce0b;
 }
 
 .animeLeft {
