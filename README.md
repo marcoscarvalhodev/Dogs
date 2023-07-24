@@ -9,6 +9,7 @@ The main technologies that I used in this project were:
 * React
 * JavaScript
 * CSS (css.modules)
+* HTML
 * Consuming API 
 
 
