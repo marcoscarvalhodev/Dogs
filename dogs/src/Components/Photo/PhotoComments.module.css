@@ -1,0 +1,30 @@
+.comments {
+  overflow-y: auto;
+  word-break: break-word;
+  padding: 0rem 1rem 2rem 2rem;
+  margin-right: 2rem;
+  min-height: 150px;
+}
+
+.comments::-webkit-scrollbar {
+  width: 1rem;
+  
+  
+}
+
+.comments::-webkit-scrollbar-thumb {
+  background: #a1e781;
+  border-left: 0.1rem solid #ffffff;
+  border-right: 0.1rem solid #ffffff;
+}
+
+.comments::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.comments li {
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid #eee;
+}
