@@ -7,6 +7,7 @@ import useFetch from "../../Hooks/useFetch";
 import { PHOTO_POST } from "../../api";
 import Error from "../Helper/Error";
 import { useNavigate } from "react-router-dom";
+import { ReactComponent as FileButton } from "../../Assets/picture.svg";
 
 const UserPhotoPost = () => {
   const name = useForm();
@@ -56,7 +57,7 @@ const UserPhotoPost = () => {
         <Input label="Weight (kg)" type="number" name="weight" {...weight} />
         <Input label="Age" type="number" name="age" {...age} />
         <div className={styles.buttonWrapper}>
-          <button className={styles.buttonFile} onClick={buttonFile}></button>
+          <button className={styles.buttonFile} onClick={buttonFile}><FileButton /></button>
         </div>
         <input
           className={styles.inputFile}

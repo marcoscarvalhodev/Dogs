@@ -11,34 +11,38 @@
 }
 
 .buttonFile {
-  padding: .3rem .6rem;
   line-height: 1;
-  border: 1px solid #333;
+  border: 1px solid transparent;
   font-size: .875rem;
   font-family: var(--type-first);
   cursor: pointer;
   border-radius: .4rem;
   transition: .3s;
+  height: 40px;
+  width: 40px;
+}
+
+.buttonFile svg * {
+  transition: .3s;
 }
 
 
-
-.buttonFile {
-  background: url('../../Assets/picture.svg') no-repeat no-repeat center;
-  width: 45px;
-  height: 45px;
-}
-
-.buttonFile:focus, 
-.buttonFile:hover  {
+.buttonFile:focus svg * , 
+.buttonFile:hover svg *  {
   outline: none;
-  background: url('../../Assets/picture-green.svg') no-repeat no-repeat center;
-  box-shadow: 0 0 0 3px #a1e781;
-  border-color: #49ce0b;
+  fill:#49ce0b ;
+  stroke: #49ce0b;
   
 }
 
-
+.buttonFile:focus, 
+.buttonFile:hover {
+  outline: none;
+  background: white;
+  box-shadow: 0 0 0 3px #a1e781;
+  border-color: #49ce0b;
+  color: #49ce0b;
+}
 
 .preview {
   border-radius:1rem ;
