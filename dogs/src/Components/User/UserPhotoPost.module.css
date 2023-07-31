@@ -5,16 +5,15 @@
   margin-bottom: 2rem;
 }
 
-.file {
+.buttonFile {
   margin-bottom: 1rem;
   
 }
 
-.file::file-selector-button {
-  background: #ddd;
+.buttonFile {
   padding: .3rem .6rem;
   line-height: 1;
-  border: 1px solid transparent;
+  border: 1px solid #333;
   font-size: .875rem;
   font-family: var(--type-first);
   cursor: pointer;
@@ -22,13 +21,24 @@
   transition: .3s;
 }
 
-.file::file-selector-button:focus, 
-.file::file-selector-button:hover {
-  outline: none;
-  background: white;
-  box-shadow: 0 0 0 3px #eee;
-  border-color: #333;
+
+
+.buttonFile {
+  background: url('../../Assets/picture.svg') no-repeat no-repeat center;
+  width: 45px;
+  height: 45px;
 }
+
+.buttonFile:focus, 
+.buttonFile:hover  {
+  outline: none;
+  background: url('../../Assets/picture-green.svg') no-repeat no-repeat center;
+  box-shadow: 0 0 0 3px #a1e781;
+  border-color: #49ce0b;
+  
+}
+
+
 
 .preview {
   border-radius:1rem ;
@@ -41,4 +51,8 @@
   display: block;
   height: 0px;
   padding-bottom: 100%;
+}
+
+.inputFile {
+  display: none;
 }
