@@ -18,6 +18,7 @@ const UserPhotoPost = () => {
   const navigate = useNavigate();
   const fileRef = React.useRef();
   const tooltipRef = React.useRef();
+  const parameterRef = React.useRef();
   const [tooltip, setTooltip] = React.useState(false);
 
   React.useEffect(() => {
@@ -54,15 +55,15 @@ const UserPhotoPost = () => {
 
   function handleTooltipMove(event) {
     setTooltip(true);
-    if(tooltip){
-      tooltipRef.current.style.top = `${event.pageY - 210}px`;
-    if (event.pageX + 240 > window.innerWidth) {
-      tooltipRef.current.style.left = `${event.pageX + 190}px`;
-    } else {
-      tooltipRef.current.style.left = `${event.pageX + 20}px`;
-      
-    }}
     
+    if (tooltip) {
+      const buttonLeft = parameterRef.current.getBoundingClientRect().left
+      const buttonTop = parameterRef.current.getBoundingClientRect().bottom
+      
+      tooltipRef.current.style.top = `${(event.pageY - buttonTop) + 270}px`;
+      tooltipRef.current.style.left = `${(event.pageX - buttonLeft) + 20}px`;
+      
+    }
   }
 
   function handleTooltipRemove() {
@@ -75,9 +76,20 @@ const UserPhotoPost = () => {
         <Input label="Name" type="text" name="name" {...name} />
         <Input label="Weight (kg)" type="number" name="weight" {...weight} />
         <Input label="Age" type="number" name="age" {...age} />
-        <div className={styles.buttonWrapper}>
-          <button className={styles.buttonFile} onMouseMove={handleTooltipMove} onMouseLeave={handleTooltipRemove} onClick={buttonFile}><FileButton /></button>
-          {tooltip && <div className={styles.tooltip} ref={tooltipRef}>Add a pic</div>}
+        <div ref={parameterRef} className={styles.buttonWrapper}>
+          <button
+            className={styles.buttonFile}
+            onMouseMove={handleTooltipMove}
+            onMouseLeave={handleTooltipRemove}
+            onClick={buttonFile}
+          >
+            <FileButton />
+          </button>
+          {tooltip && (
+            <div className={styles.tooltip} ref={tooltipRef}>
+              Add a pic
+            </div>
+          )}
         </div>
         <input
           className={styles.inputFile}

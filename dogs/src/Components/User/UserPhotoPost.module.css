@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   margin-bottom: 2rem;
+  position: relative;
 }
 
 .buttonFile {
@@ -68,10 +69,11 @@
     box-shadow: 0 0 0 2px #49ce0b, 0 0 0 6px #a1e781;
     padding: 5px;
     color: #333;
-    font-family: "IBM Plex Mono", monospace;
+    font-family: var(--type-first);
     font-weight: bold;
     font-size: 14px;
-    max-width: 180px;
+    max-width: 100px;
     border-radius: 2px;
   
 }
+
