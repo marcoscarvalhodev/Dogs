@@ -17,6 +17,8 @@ const UserPhotoPost = () => {
   const { data, error, loading, request } = useFetch();
   const navigate = useNavigate();
   const fileRef = React.useRef();
+  const tooltipRef = React.useRef();
+  const [tooltip, setTooltip] = React.useState(false);
 
   React.useEffect(() => {
     if (data) navigate("/account");
@@ -50,6 +52,23 @@ const UserPhotoPost = () => {
     fileRef.current.click();
   }
 
+  function handleTooltipMove(event) {
+    setTooltip(true);
+    if(tooltip){
+      tooltipRef.current.style.top = `${event.pageY - 210}px`;
+    if (event.pageX + 240 > window.innerWidth) {
+      tooltipRef.current.style.left = `${event.pageX + 190}px`;
+    } else {
+      tooltipRef.current.style.left = `${event.pageX + 20}px`;
+      
+    }}
+    
+  }
+
+  function handleTooltipRemove() {
+    setTooltip(false);
+  }
+
   return (
     <section className={`${styles.photoPost} animeLeft`}>
       <form onSubmit={handleSubmit}>
@@ -57,7 +76,8 @@ const UserPhotoPost = () => {
         <Input label="Weight (kg)" type="number" name="weight" {...weight} />
         <Input label="Age" type="number" name="age" {...age} />
         <div className={styles.buttonWrapper}>
-          <button className={styles.buttonFile} onClick={buttonFile}><FileButton /></button>
+          <button className={styles.buttonFile} onMouseMove={handleTooltipMove} onMouseLeave={handleTooltipRemove} onClick={buttonFile}><FileButton /></button>
+          {tooltip && <div className={styles.tooltip} ref={tooltipRef}>Add a pic</div>}
         </div>
         <input
           className={styles.inputFile}
