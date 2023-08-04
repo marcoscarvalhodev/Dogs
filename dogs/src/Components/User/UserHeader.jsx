@@ -19,8 +19,6 @@ const UserHeader = () => {
     }
   }, [location])
 
-  console.log(location)
-
   return (
     <header className={styles.header}>
       <h1 className='title'>{title}</h1>
