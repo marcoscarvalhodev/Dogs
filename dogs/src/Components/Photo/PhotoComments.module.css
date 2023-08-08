@@ -6,6 +6,10 @@
   min-height: 150px;
 }
 
+.single.comments {
+  padding: 0px;
+}
+
 .comments::-webkit-scrollbar {
   width: 1rem;
   
