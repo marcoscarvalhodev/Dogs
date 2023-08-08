@@ -83,6 +83,8 @@ input {
   fill: #49ce0b;
 }
 
+
+
 .animeLeft {
   opacity: 0;
   transform: translateX(-20px);
@@ -95,3 +97,4 @@ input {
     transform: initial;
   }
 }
+
