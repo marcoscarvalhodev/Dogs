@@ -53,11 +53,16 @@
   grid-row: 1/4 ;
 }
 
-.single .img {
+.single.img {
   grid-row: 1;
   border-radius: .4rem;
   overflow: hidden;
-  
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.single.photo::-webkit-scrollbar {
+  width: 0px;
 }
 
 .comments {
