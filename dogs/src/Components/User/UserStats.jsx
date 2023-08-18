@@ -17,7 +17,7 @@ const UserStats = () => {
       
     }
     getData();
-    console.log(data)
+    
   }, [request]);
   
 
