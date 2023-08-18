@@ -7,8 +7,11 @@ import PhotoDelete from "./PhotoDelete";
 import Image from "../Helper/Image";
 
 const PhotoContent = ({ data, single}) => {
-  const user = React.useContext(UserContext)
+  const user = React.useContext(UserContext);
+  
   const { photo, comments } = data;
+
+  
 
   return (
     <div className={`${styles.photo} ${single ? styles.single : ''}`}>
@@ -22,6 +25,7 @@ const PhotoContent = ({ data, single}) => {
             
             <span className={styles.visualizacoes}>{photo.acessos}</span>
           </p>
+          
 
           <h1 className={`title ${single ? styles.singleTitle : styles.titleContent}`}><Link to={`/photo/${photo.id}`}>{photo.title}</Link></h1>
           <ul className={styles.attributes}>
