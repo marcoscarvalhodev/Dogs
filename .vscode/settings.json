@@ -9,6 +9,5 @@
     "dogs/package.json": true,
     "dogs/package-lock.json": true,
     "dogs/README.md": true,
-    "dogs/public": true
   }
 }
