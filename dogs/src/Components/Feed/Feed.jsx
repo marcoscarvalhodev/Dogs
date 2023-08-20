@@ -4,6 +4,7 @@ import FeedPhotos from "./FeedPhotos";
 import PropTypes from "prop-types";
 
 const Feed = ({ user }) => {
+  console.log(user)
   const [modalPhoto, setModalPhoto] = React.useState(null);
   const [pages, setPages] = React.useState([1, 2, 3]);
   const [infinite, setInfinite] = React.useState(true);
