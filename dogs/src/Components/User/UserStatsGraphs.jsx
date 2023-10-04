@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./UserStatsGraphs.module.css";
 import { VictoryPie, VictoryChart, VictoryBar } from "victory";
+import AlternateText from "../Helper/AlternateText";
 
 const UserStatsGraphs = ({ data }) => {
   const [graph, setGraph] = React.useState([]);
@@ -10,7 +11,6 @@ const UserStatsGraphs = ({ data }) => {
     if (data.length > 0) {
       const graphData = data.map((item) => {
         const acessos = item.acessos < 1 ? 1 : Number(item.acessos);
-        console.log(acessos)
         return {
           x: item.title,
           y: acessos
@@ -53,7 +53,7 @@ const UserStatsGraphs = ({ data }) => {
         </div>
       </section>
     );
-  else return <div className={styles.alternate}><p>Add pics so stats will be shown</p></div>;
+  else return <AlternateText altText="Add pics so stats will be shown"/>;
 };
 
 export default UserStatsGraphs;

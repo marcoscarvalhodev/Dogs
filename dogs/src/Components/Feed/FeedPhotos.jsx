@@ -6,8 +6,10 @@ import { PHOTOS_GET } from "../../api";
 import Error from "../Helper/Error";
 import Loading from "../Helper/Loading";
 
+
 const FeedPhotos = ({ setInfinite, page, user, setModalPhoto }) => {
   const { data, loading, error, request } = useFetch();
+  
 
   React.useEffect(() => {
     async function fetchPhotos() {
@@ -28,16 +30,17 @@ const FeedPhotos = ({ setInfinite, page, user, setModalPhoto }) => {
   if (data)
     return (
       <ul className={`${styles.feed} animeLeft`}>
-        {data.map((photo) => (
+         {data.map((photo) => (
           <FeedPhotosItem
             key={photo.id}
             photo={photo}
             setModalPhoto={setModalPhoto}
+            dado={true}
           />
         ))}
       </ul>
     );
-  else return null;
+    else return null;
 };
 
 export default FeedPhotos;

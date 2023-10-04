@@ -1,0 +1,30 @@
+.alternate {
+  min-height: calc(100vh - 20rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alternate p {
+  font-size: 2rem;
+  box-shadow: 0 0 0 2px #49ce0b, 0 0 0 6px #a1e781;
+  color: #333;
+    font-family: var(--type-first);
+    font-weight: bold;
+    padding: 30px 15px;
+    border-radius: 2px;
+    animation: blink 2.5s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+   opacity: 0;
+  }
+  70% {
+   opacity: 1;
+  }
+  100% {
+   opacity: 0;
+  }
+}
+

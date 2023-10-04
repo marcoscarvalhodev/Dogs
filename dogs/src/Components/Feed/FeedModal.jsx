@@ -15,7 +15,6 @@ const FeedModal = ({photo, setModalPhoto}) => {
     request(url, options)
   }, [photo, request])
 
-  console.log(data)
   function handleOutsideClick(event) {
     if(event.target === event.currentTarget) {
       
@@ -28,7 +27,6 @@ const FeedModal = ({photo, setModalPhoto}) => {
       {error && <Error error={error}/>}
       {loading && <Loading />}
       {data && <PhotoContent data={data}/>}
-      
     </div>
   )
 }
